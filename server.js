@@ -59,7 +59,12 @@ MongoClient.connect(DB_CONN)
             quotesCollection.deleteOne(
                 { name: req.body.name}
             )
-            .then(result => {res.json('Deleted Darth Vader\'s quote')})
+            .then(result => {
+                if(result.deletedCount === 0){
+                    return res.json('No quote to delete')
+                }
+                res.json('Deleted Darth Vader\'s quote')
+            })
             .catch(error => console.log(error))
         })
         
