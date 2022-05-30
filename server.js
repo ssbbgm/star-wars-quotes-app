@@ -17,7 +17,8 @@ MongoClient.connect(DB_CONN)
         app.set('view engine', 'ejs');
 
         app.use(bodyParser.urlencoded({ extended: true }));
-        app.use(express.json());
+        app.use(express.static('public'))
+        app.use(bodyParser.json());
 
         app.get('/', (req, res) => {
             db.collection('quotes').find().toArray()
