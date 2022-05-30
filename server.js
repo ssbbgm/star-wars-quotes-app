@@ -27,6 +27,10 @@ MongoClient.connect(DB_CONN)
             })
             .catch(error => console.log(error))
         });
+
+        app.put('/quotes', (req, res) => {
+            console.log(req.body)
+        })
         
         app.post('/quotes', (req, res) => {
                 quotesCollection.insertOne(req.body)
