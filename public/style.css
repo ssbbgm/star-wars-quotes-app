@@ -5,43 +5,70 @@
 /* Box Model Hack */
 * {
     box-sizing: border-box;
+    margin: auto 0;
+
+}
+
+html { 
+    background: url(./stars.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
   
 /******************************************
 /* LAYOUT
 /*******************************************/
-  img {
+img {
     display: block;
     margin: 0 auto;
     width: 25%;
-  }
+}
 
-  h1 {
+h1 {
     display: flex;
     justify-content: start;
     border: 1px black solid;
     border-radius: 30px;
     padding: 20px;
-  }
+    margin: 20px;
+}
   
-  .row {
+.row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-  }
+    justify-content: space-between;
+    margin: 20px;
+    gap: 30px;
+}
 
-  .card {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+.card {
     border: 1px black solid;
     border-radius: 30px;
     padding: 20px;
     width: 300px;
     height: 300px;
-  }
+}
+
+#quotes {
+    display: flex;
+    flex-direction: column;
+    border: 1px black solid;
+    border-radius: 30px;
+    padding: 10px;
+    height: 200px;
+    margin: 20px;
+}
+
+#quotes h2{
+    margin: 2px;
+}
+
+ul{
+    margin: 3px;
+}
   
 /******************************************
 /* ADDITIONAL STYLES
