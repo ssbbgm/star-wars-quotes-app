@@ -9,29 +9,35 @@
 </head>
 <body>
     <h1>May Node and Express Be With You.</h1>
-    <form action="/quotes" method="POST">
-        <input type="text" placeholder="name" name="name">
-        <input type="text" placeholder="quote" name="quote">
-        <button type="submit">Submit</button>
-    </form>
 
-    <div>
-        <h2>Darth Vader Invades!</h2>
+    <div class="row">
+        <div class="card">
+            <h2>Add Quote</h2>
+            <form action="/quotes" method="POST">
+                <input type="text" placeholder="name" name="name">
+                <input type="text" placeholder="quote" name="quote">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+
+        <div class="card">
+            <h2>Darth Vader Invades!</h2>
+            <p>
+                Replace first Yoda's quote with a quote written by Darth Vader.
+            </p>
+            <button id="update-button">Replace Yoda's quote</button>
+        </div>
+
+        <div class="card">
+        <h2>Remove Darth Vader!</h2>
         <p>
-            Replace first Yoda's quote with a quote written by Darth Vader.
+            Delete one Darth Vader quote, if exists.
         </p>
-        <button id="update-button">Replace Yoda's quote</button>
+        <button id="delete-button">Delete Darth Vader's quote</button>
+        <div id="message"></div>
     </div>
-
-   <div>
-       <h2>Remove Darth Vader!</h2>
-       <p>
-           Delete one Darth Vader quote, if exists.
-       </p>
-       <button id="delete-button">Delete Darth Vader's quote</button>
-       <div id="message"></div>
    </div>
-
    <h2>Quotes</h2>
    <ul class="quotes">
        <% for(var i = 0; i < quotes.length; i++) {%>
