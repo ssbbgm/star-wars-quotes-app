@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Star Wars Quote App</title>
 </head>
 <body>
@@ -13,15 +14,6 @@
         <input type="text" placeholder="quote" name="quote">
         <button type="submit">Submit</button>
     </form>
-    <h2>Quotes</h2>
-    <ul class="quotes">
-        <% for(var i = 0; i < quotes.length; i++) {%>
-            <li class="quote">
-                <span><%= quotes[i].name %></span>:
-                <span><%= quotes[i].quote %></span>
-            </li>    
-        <%} %>
-    </ul>
 
     <div>
         <h2>Darth Vader Invades!</h2>
@@ -39,6 +31,16 @@
        <button id="delete-button">Delete Darth Vader's quote</button>
        <div id="message"></div>
    </div>
+
+   <h2>Quotes</h2>
+   <ul class="quotes">
+       <% for(var i = 0; i < quotes.length; i++) {%>
+           <li class="quote">
+               <span><%= quotes[i].name %></span>:
+               <span><%= quotes[i].quote %></span>
+           </li>    
+       <%} %>
+   </ul>
     <script src="/main.js"></script>
 </body>
 </html>
