@@ -5,8 +5,7 @@ const { render } = require('express/lib/response');
 const MongoClient = require('mongodb').MongoClient;
 const app = express();
 const PORT = process.env.PORT || 3001;
-const DB_CONN = "mongodb+srv://user825:marij2004@primary.2pvxiwq.mongodb.net/?retryWrites=true&w=majority";
-
+const DB_CONN = process.env.MONGODB_URI;
 
 MongoClient.connect(DB_CONN, { useNewUrlParser: true, useUnifiedTopology: true } )
     .then(client => {
