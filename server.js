@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3001;
 const DB_CONN = "mongodb+srv://user825:marij2004@primary.2pvxiwq.mongodb.net/?retryWrites=true&w=majority";
 
 
-MongoClient.connect(DB_CONN)
+MongoClient.connect(DB_CONN, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true } )
     .then(client => {
         console.log('Connected to Database')
         const db = client.db('star-wars-quotes');
