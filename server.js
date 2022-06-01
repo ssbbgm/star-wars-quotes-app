@@ -5,7 +5,7 @@ const { render } = require('express/lib/response');
 const MongoClient = require('mongodb').MongoClient;
 const app = express();
 const PORT = process.env.PORT || 3001;
-const DB_CONN = process.env.DB_CONN;
+const DB_CONN = "mongodb+srv://user825:marij2004@cluster0.lyn7zl3.mongodb.net/?retryWrites=true&w=majority";
 
 
 MongoClient.connect(DB_CONN)
